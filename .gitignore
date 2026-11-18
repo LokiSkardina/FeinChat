@@ -1,0 +1,51 @@
+# Local data and development output
+# Includes screenshot originals in data/tmp/. README images live in docs/screenshots/.
+data/
+node_modules/
+.cache/
+.npm/
+npm-cache/
+.electron-cache/
+.electron-builder-cache/
+/renderer/
+/release/
+dist/
+build/
+out/
+coverage/
+tmp/
+temp/
+logs/
+test-results/
+playwright-report/
+*.log
+*.tmp
+*.temp
+
+# Environment files, credentials, and database files
+.env
+.env.*
+.envrc
+*.local
+secrets/
+credentials/
+secrets.json
+credentials.json
+api-keys.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Local instructions and audit records
+/AGENTS.md
+/AUDIT.md
+/test/fixtures/local/
+.DS_Store
+Thumbs.db

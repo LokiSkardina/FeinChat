@@ -1,0 +1,46 @@
+{
+  "name": "feinchat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal portable chat for Windows",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "setup": "node scripts/run.cjs setup",
+    "dev": "node scripts/run.cjs dev",
+    "build": "node scripts/run.cjs build",
+    "check": "node scripts/run.cjs check",
+    "portable": "node scripts/run.cjs portable"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "electron": "^45.0.0",
+    "electron-builder": "^26.12.1",
+    "lucide-react": "1.74.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-markdown": "10.1.0",
+    "remark-gfm": "4.0.1",
+    "vite": "^8.0.0"
+  },
+  "build": {
+    "appId": "personal.feinchat.desktop",
+    "productName": "FeinChat",
+    "files": [
+      "electron/**/*",
+      "renderer/**/*",
+      "assets/icon.ico",
+      "!**/node_modules{,/**}"
+    ],
+    "extraFiles": [
+      { "from": "assets/README.txt", "to": "README.txt" }
+    ],
+    "npmRebuild": false,
+    "win": {
+      "target": "dir",
+      "icon": "assets/icon.ico",
+      "signExecutable": false
+    }
+  }
+}
